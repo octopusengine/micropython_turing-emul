@@ -33,6 +33,8 @@ The program is loaded as a text file (`programs_turing/program.txt`) where **eac
 
 Links:
 
+https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/four.html
+
 https://sandipanweb.wordpress.com/2020/08/08/simulating-a-turing-machine-with-python-and-executing-programs
 
 
