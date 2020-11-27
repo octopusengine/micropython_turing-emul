@@ -1,6 +1,8 @@
 # ESP32 micropython_turing-emul
 ESP32 &amp; MicroPython - turing machine emulator
 
+![tm2](images/turing2.PNG)
+
 A Turing machine is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules.
 
 ---
