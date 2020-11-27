@@ -15,6 +15,8 @@ This runs example, that allows you to control I/O peripherals connected to your 
 
 The program is loaded as a text file (`programs_turing/program.txt`) where **each line represents a transition function of the form 𝛿(𝑝,𝑋)=(𝑞,𝑌,D)**, so the 5 tuples are strictly in the order p, X, Y, D, q *(the character _ represents a blank symbol on the tape)*
 
+State	(0..n) | Symbol Read	(0/1/_) | Write Instruction (0/,/_) |	Move Instruction (l/r/*)	| Next State (n/H)
+
 ```
 0 0 0 r 0
 0 1 1 r 0
