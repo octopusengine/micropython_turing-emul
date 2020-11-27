@@ -21,13 +21,27 @@ def run_src(src_file, input_vector, debug=True):
 
 # ----------------
 
+## program = 'programs_turing/program_add.txt'
+## input = '1101_101' # return: 10010 H
+## run_src(program, input)
+
+## input = '1100_001' # return: 1101 H
+## input = '111_1000' # return: 1111 H
+
 program = 'programs_turing/program_add.txt'
-input = '1101_101' # return: 10010 H
-run_src(program, input)
+## input = '1101_101' # return: 10010 H
+## run_src(program, input)
 
-input = '1100_001' # return: 1101 H
-run_src(program, input)
+## input = '1100_001' # return: 1101 H
+## input = '111_1000' # return: 1111 H
 
-input = '111_1000' # return: 1111 H
-run_src(program, input)
 
+program = 'programs_turing/program_pal.txt'
+## input = '111000' # return: 0 H (no palindrom)
+## run_src(program, input)
+
+## input = '110011' return: 1 H (palindrom)
+## run_src(program, input)
+
+input = '1011001101___' # return: 1 H (palindrom)
+run_src(program, input)
