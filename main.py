@@ -5,22 +5,29 @@ def run_src(src_file, input_vector, debug=True):
     print("File: " + src_file)
     print("="*39)
     try:
-        program_file = open('programs_turing/program.txt').read()
+        program_file = open(src_file).read()
         if debug:
             print(program_file)
             print("="*39)
+            print("Input: ", input_vector)
+            print("-"*39)
         tm = TuringMachine(program_file, input_vector)
         tm.run()
     except Exception as e:
-        sys.stderr.write("Error: %s\n" % e)
+        print("Error: ",e)
     print()
     print() 
 
 
 # ----------------
 
-input = '1101_101'
-program = 'programs_turing/program.txt'
-
+program = 'programs_turing/program_add.txt'
+input = '1101_101' # return: 10010 H
 run_src(program, input)
-# return: 10010 H
+
+input = '1100_001' # return: 1101 H
+run_src(program, input)
+
+input = '111_1000' # return: 1111 H
+run_src(program, input)
+
