@@ -13,6 +13,24 @@ This runs example, that allows you to control I/O peripherals connected to your 
 
 ## Emulator
 
+### Python
+
+```
+programs_turing/...
+turing.py
+run.py
+```
+
+### MicroPython
+
+```
+programs_turing/...
+lib/pubsub.py
+components/rgb.py
+uturing.py
+main.py
+```
+
 ### program_file
 
 The program is loaded as a text file (`programs_turing/program.txt`) where **each line represents a transition function of the form fn(p,X)=(Y,D,q)**, 
