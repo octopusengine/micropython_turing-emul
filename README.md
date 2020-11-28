@@ -100,10 +100,10 @@ Output:  00011010
 
 ```
 --- Table: --- 
-[  i]  iteration
-H      head position
-(s)    state
-tape   actual "value"
+[  i]  - iteration
+H      - head position
+(s)    - state
+tape   - actual "value"
 
 ```
 
