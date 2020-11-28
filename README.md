@@ -13,25 +13,73 @@ This runs example, that allows you to control I/O peripherals connected to your 
 
 ## Emulator
 
-The program is loaded as a text file (`programs_turing/program.txt`) where **each line represents a transition function of the form 𝛿(𝑝,𝑋)=(𝑞,𝑌,D)**, so the 5 tuples are strictly in the order p, X, Y, D, q *(the character _ represents a blank symbol on the tape)*
+### program_file
+
+The program is loaded as a text file (`programs_turing/program.txt`) where **each line represents a transition function of the form fn(p,X)=(Y,D,q)**, 
+so the 5 tuples are strictly in the order p, X, Y, D, q *(the character _ represents a blank symbol on the tape)*
 
 ```
-State	(0..n) | Symbol Read	(0/1/_) | Write Instruction (0/1/_) |	Move Instruction (l/r/*)	| Next State (n/H)
+fn(p,X)=(Y,D,q)
+
+p: State	(0..n)
+X: Symbol Read (0/1/_) "IF READ X THEN WRITE Y"
+Y: Write Instruction (0/1/_)
+D: Move Instruction (L/R/*) / Direction
+q: Next State (n/H)
+
+State | Symbol Read || Write Instruction |	Move Instruction	| Next State
+p X | Y D q
+
+-> program.txt one line: p X Y D q
+
+```
+
+Simple example - inverse (program_turing/program_inv.txt)
+
+```
+0 0 1 R 0
+0 1 0 R 0
+0 _ _ * H
+
+```
+
+---
+
+### usage | run_src()
+
+```python
+# --- inversion (binary negation) ---
+program = 'programs_turing/program_inv.txt'
+input = '11100101' # return: 00011010 H
+run_src(program, input)
 ```
 
 ```
-0 0 0 r 0
-0 1 1 r 0
-0 _ _ r 1
-1 0 0 r 1
-1 1 1 r 1
-1 _ _ l 2
-2 0 1 l 2
-2 1 0 l 3
-2 _ _ r 5
-3 0 0 l 3
-...
+=======================================
+File: programs_turing/program_inv.txt
+=======================================
+0 0 1 R 0
+0 1 0 R 0
+0 _ _ * H
+
+=======================================
+Input:  11100101
+---------------------------------------
+   [  i]   H (s) tape
+.......................................
+   [  0]  51 (0) 01100101
+   [  1]  52 (0) 00100101
+   [  2]  53 (0) 00000101
+   [  3]  54 (0) 00010101
+   [  4]  55 (0) 00011101
+   [  5]  56 (0) 00011001
+   [  6]  57 (0) 00011011
+   [  7]  58 (0) 00011010
+   [  8]  58 (H) 00011010
+Output:  00011010
+
 ```
+
 
 ---
 
