@@ -21,7 +21,7 @@ so the 5 tuples are strictly in the order p, X, Y, D, q *(the character _ repres
 ```
 fn(p,X)=(Y,D,q)
 
-p: State	(0..n)
+p: State (0..n)
 X: Symbol Read (0/1/_) "IF READ X THEN WRITE Y"
 Y: Write Instruction (0/1/_)
 D: Move Instruction (L/R/*) / Direction
@@ -80,6 +80,14 @@ Output:  00011010
 
 ```
 
+```
+--- Table: --- 
+[  i]  iteration
+H      head position
+(s)    state
+tape   actual "value"
+
+```
 
 ---
 
