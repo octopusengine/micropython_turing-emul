@@ -34,7 +34,7 @@ main.py
 ### program_file
 
 The program is loaded as a text file (`programs_turing/program.txt`) where **each line represents a transition function of the form fn(p,X)=(Y,D,q)**, 
-so the 5 tuples are strictly in the order p, X, Y, D, q *(the character _ represents a blank symbol on the tape)*
+so the 5-tuple are strictly in the order p, X, Y, D, q *(the character _ represents a blank symbol on the tape)*
 
 ```
 fn(p,X)=(Y,D,q)
@@ -110,6 +110,8 @@ tape   - actual "value"
 ---
 
 Links:
+
+https://en.wikipedia.org/wiki/Turing_machine
 
 https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/four.html
 
